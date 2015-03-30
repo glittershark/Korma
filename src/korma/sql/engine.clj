@@ -210,7 +210,7 @@
   (let [[func value] (if (vector? v)
                        v
                        [pred-= v])
-        pred? (predicates func)
+        pred? (predicates (symbol (name func)))
         func (if pred?
                (resolve pred?)
                func)]
